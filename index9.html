@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery- making custom right-click context menu example</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>   
+</head>
+<body>
+<div class="container"  oncontextmenu ="event.preventDefault();$('#context-menu').show();$('#context-menu').offset({'top':mouseY,'left':mouseX})">
+<table class="table table-bordered">   
+    <tr>
+        <th>Name</th>
+        <th>Details</th>          
+    </tr>
+    <tr>
+        <td>Expert PHP</td>
+        <td>Provide Online tutorials</td>
+    </tr>
+ </table>
+ </div>
+<div class="context-menu" id="context-menu" style="display:none;position:absolute;z-index:99">
+    <ul>
+      <li><a href="#"><i class="fa fa-eye"></i> View</a></li>       
+      <li><a href="#"><i class="fa fa-share-alt"></i> Share</a></li>       
+      <li><a href="#"><i class="fa fa-trash"></i> Delete</a></li>       
+      <li><a href="#"><i class="fa fa-share fa-fw"></i> Move</a></li>       
+      <li><a href="#"><i class="fa fa-files-o"></i> Copy</a></li>       
+    </ul>
+</div>
+</body>
+</head>
+</html>
+Add script for Positioning and hide context menu
+<script>
+    var mouseX;
+    var mouseY;
+    $(document).mousemove(function(e) {
+       mouseX = e.pageX; 
+       mouseY = e.pageY;
+    });  
+    $(document).bind("mousedown", function (e) {
+    // If the clicked element is not the menu
+    if (!$(e.target).parents(".context-menu").length > 0) {    
+        // Hide it
+        $(".context-menu").hide(100);
+    }
+  });
+</script>
+Add style to context menu
+ <style>
+/*right click*/
+  .context-menu ul{ 
+    z-index: 1000;
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 5px;
+    padding: 0;
+}
+/* Each of the items in the list */
+.context-menu ul li {
+    padding: 8px 12px;
+    cursor: pointer;
+    list-style-type: none;
+}
+.context-menu ul li:hover {
+    background-color: #DEF;
+}
+ </style>

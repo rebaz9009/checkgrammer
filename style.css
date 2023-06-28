@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{
+	padding-top: 50px;
+	background-color:#77B892;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+.form{
+	position:relative;
+	display: inline-block;
+}
+.textarea{
+	background-color: #327D6A;
+	color:blue;
+	font-family:adobe arabic;
+	padding:10px;
+	position: absolute;
+	top:0px;
+	left:0px;
+	transition: 0.5s;
+}
+hex{
+	
+	color:blue;
+	}
+	hex2{
+	
+	color:red;
+	}
+	hex3{
+	
+	color:Purple;
+	}
+.input-text{
+	padding:10px 10px 10px 35px;
+	font-size:90px;
+	border:none;
+	margin:0px 50px 30px 0px;
+}
+.input-text:focus + .label{
+	-ms-transform: rotate(-55deg);
+    -webkit-transform: rotate(-55deg);
+    -moz-transform: rotate(-55deg);
+    transform: rotate(-55deg);
+    margin:-15px 0px 0px -29px;
+} 
+.open + .label{
+	transform: rotate(-55deg);
+	margin:-15px 0px 0px -29px;
+}
+textarea {
+border: 1px solid #adb5bd;
+ width: 800px;
+ color: inherit;
+ font: 18px/25px 'Droid Sans Mono', sans-serif;
+ height: 200px;
+ background-color: teal;
+ font-size: 30px;
+ \\font-weight: bold;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ border: 6px solid #d0bfff;
+}
+textarea:focus {
+  background-color: chocolate;
+}
+.comment-box {
+  padding: 0.8rem 1rem;
+  border-radius: 30px;
+}
+input[type="text"],
+select,
+fname {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  border: none;
+  background: #4aaaa5;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+}
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+ {
+  color: blue;
+  font-size: 1em;
+  font-family: Arial,Helvetica,sans-serif;
+  }
+  
